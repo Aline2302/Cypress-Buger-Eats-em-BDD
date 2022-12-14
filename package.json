@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy": "cypress open",
-    "cypress:execution": "cypress run"
+    "cyrun": "cypress run"
   },
   "keywords": [
     "cypress"
@@ -17,6 +17,7 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
     "@faker-js/faker": "^7.6.0",
     "cypress": "^10.3.0",
+    "cypress-file-upload": "^5.0.8",
     "esbuild": "^0.14.48",
     "multiple-cucumber-html-reporter": "^1.21.4"
   },

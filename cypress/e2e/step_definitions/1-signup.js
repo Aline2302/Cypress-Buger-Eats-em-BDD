@@ -32,7 +32,7 @@ And("completar o cadastro", () => {
   signup.elements.number().type(`${Cypress._.random(0, 1e4)}`)
   signup.elements.complement().type('perto do mercado Real')
   signup.elements.motorbike().should('exist').click()
-  cy.get('input[accept="image/*"]').attachFile('cnh-digital.jpg',{ force: true })
+  signup.elements.cnh().attachFile('cnh-digital.jpg',{ force: true })
   signup.elements.finalizeRegistration().should('exist').click()
   
 })
@@ -40,22 +40,4 @@ And("completar o cadastro", () => {
 Then("verá a logo", () => {
   signup.elements.logo().should('exist').click()
 })
-export default {
-  register: function(){
-      var entregador = {
-          name:'Aline Meneses',
-          cpf:'00000014141',
-          email:'aline123@gmail.com',
-          whatssap:'11999999999',
-          address:{
-              postalcode:'04534011',
-              street:'Rua Joaquim Floriano',
-              number:'1000',
-              defails:'Ap 142',
-              district:'São Paulo/SP',
-          },
-          metodo_entrega:'moto',
-          cnh:'cnh-digital.jpg'
-      }
-      return entregador
-  }}
+
